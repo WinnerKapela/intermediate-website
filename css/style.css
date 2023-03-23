@@ -1,0 +1,964 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+/* Design for header*/
+header{
+    background-color: #fff;
+    margin:0;
+}
+header h1{
+    border-bottom: 1px solid #e6e3e3;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+
+}
+header h1 a{
+    text-decoration: none;
+    color: #838282;
+
+}
+header .button{
+  position: absolute;
+  display: none;
+  top: 1%;
+  right: 15px;
+   
+}
+header .menu-button img{
+    width: 32px;
+    height: auto;
+   
+}
+.navbloc{
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    width: 100%;
+}
+.navbloc nav{
+    left: 0;
+    flex: none;
+    justify-content: space-evenly;
+    white-space: nowrap;
+    flex: none;
+    width: 100%;
+    height: 60px;
+    line-height: 55px;
+    background-color: #ffffff;
+
+}
+nav ul{
+    width: 100%;
+}
+nav li{
+    display: inline;
+}
+.navbloc nav .nav-link{
+   color: #6d6c6c;
+   text-decoration: none;
+   margin-left: 100px;
+   font-size: 16px;
+}
+.navbloc nav .nav-link:hover{
+    color: #080808;
+    font-weight: 600;
+    transition: all .5s;
+    
+ }
+.navbloc nav .icones-media{
+    float: right;
+    margin-right: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+   
+}
+.navbloc nav .icones-media img{
+    width: 18px;
+    height: auto;
+    margin: 0px 15px 0px 0px;
+}
+/*Design for banner*/
+.banner {
+   margin-bottom: 0;
+}
+.banner img{
+    width: 100%;
+    height: 350px;
+}
+/* here is the styling of the main content*/
+.content{
+    background-color: #f8f7f7;
+    margin-top: 0;
+    position: relative;
+   
+   
+}
+.content section{
+   width: 60%;
+   margin-left: 120px;
+   padding-bottom: 80px;
+   margin-right: auto;
+   flex: 1 0;
+}
+.content section article {
+   padding: 30px 5px 5px 5px;
+   margin-bottom: 30px;
+    
+}
+.content section article p {
+   font-size: 14px;
+   padding: 0px 3px 0px 20px;
+   text-align: justify;
+    
+}
+.content section article .date-article{
+    color: #7b7b7b;
+    font-size: 15px;  
+    font-weight: 500;
+ }
+.content section article h2 {
+    color: #1b1b1b;
+    padding: 5px 0px 10px 0px;
+ }
+.content section article img{
+    width: 315px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+  
+    
+}
+.content .slide{
+   background-color:#ececec ;
+   width: 25%;
+   height: 100%;
+   margin-top: auto;
+   padding-top: 0px;
+   flex: none;
+   float: right;
+   position: absolute;
+   right: 0;
+   top: 0%;
+}
+.content .slide ul h2{
+    color: #1b1b1b;
+    padding: 20px 0px;
+ }
+ .content .slide ul {
+    color: #1b1b1b;
+    padding:0px 0px 10px 30px ;
+   
+ }
+ .content .slide ul li{
+    list-style-type: none;
+    padding-top: 10px;
+ }
+ .content .slide ul li a{
+    text-decoration: none;
+    color: #616161;
+    font-weight: 600;
+ }
+ .content .slide .slide-element{
+    margin-top: 50px;
+    
+ }
+ .content .slide:nth-child() .slide-element{
+    border-top: 2px solid #7e7d7d;
+    width: 80%;
+ }
+
+footer{
+    height: 190px;
+    margin-top: 0%;
+    flex: none;
+    background-color: #cac8c8;
+    color: #222222;
+    font-size: 14px;
+}
+footer h2, footer .important-links, footer .contact a{
+    text-align: center;
+    padding-top: 15px;
+    color: #222222;
+}
+footer h2{
+    font-size: 15px;
+ }
+ footer h2 a{
+    color: #222222;
+    text-decoration: none;
+ }
+footer .important-links a{
+    color: #222222;
+    margin: 5px;
+}
+footer .media-sociaux{
+    float: right;
+    margin-right: 10px;
+}
+footer .media-sociaux img{
+    width: 30px;
+    height: auto;
+    margin-left: 10px;
+}
+footer .copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    
+}
+/* Css Media query*/
+
+/*large devices*/
+@media(min-width: 1200px){
+
+   
+    /*Design for banner*/
+    .banner {
+       margin-bottom: 0;
+    }
+    .banner img{
+        width: 100%;
+        height: 380px;
+    }
+    /* here is the styling of the main content*/
+    .content{
+        background-color: #f8f7f7;
+        margin-top: 0;
+        position: relative;
+       
+       
+    }
+    .content section{
+       width: 60%;
+       margin-left: 7%;
+       padding-bottom: 5%;
+       margin-right: auto;
+       flex: 1 0;
+    }
+    .content section article {
+       padding: 4% 2% 2% 4%;
+       margin-bottom: 30px;
+    
+        
+    }
+    .content section article p {
+       font-size: 14px;
+       padding: 0px 3px 0px 20px;
+       text-align: justify;
+        
+    }
+    .content section article .date-article{
+        color: #7b7b7b;
+        font-size: 15px;  
+        font-weight: 500;
+     }
+    .content section article h2 {
+        color: #1b1b1b;
+        padding: 5px 0px 10px 0px;
+     }
+    .content section article img{
+        width: 315px;
+        height: auto;
+        float: left;
+        margin-right: 15px;
+      
+        
+    }
+    .content .slide{
+       background-color:#ececec ;
+       width: 25%;
+       height: 100%;
+       margin-top: auto;
+       padding-top: 0px;
+       flex: none;
+       float: right;
+       position: absolute;
+       right: 0;
+       top: 0%;
+    }
+    .content .slide ul h2{
+        color: #1b1b1b;
+        padding: 20px 0px;
+     }
+     .content .slide ul {
+        color: #1b1b1b;
+        padding:0px 0px 10px 30px ;
+       
+     }
+     .content .slide ul li{
+        list-style-type: none;
+        padding-top: 10px;
+     }
+     .content .slide ul li a{
+        text-decoration: none;
+        color: #616161;
+        font-weight: 600;
+     }
+     .content .slide .slide-element{
+        margin-top: 50px;
+        
+     }
+     .content .slide:nth-child() .slide-element{
+        border-top: 2px solid #7e7d7d;
+        width: 80%;
+     }
+    
+    footer{
+        height: 190px;
+        margin-top: 0%;
+        flex: none;
+        background-color: #cac8c8;
+        color: #222222;
+        font-size: 14px;
+    }
+    footer h2, footer .important-links, footer .contact{
+        text-align: center;
+        padding-top: 15px;
+    }
+    footer .important-links a{
+        color: #222222;
+        margin: 5px;
+    }
+    footer .media-sociaux{
+        float: right;
+        margin-right: 10px;
+    }
+    footer .media-sociaux img{
+        width: 30px;
+        height: auto;
+    }
+    footer .copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 10px;
+        
+    }
+
+}
+
+@media (min-width: 950px) and (max-width: 1999px){
+
+   /* Design for header*/
+
+/* here is the styling of the main content*/
+.content{
+    background-color: #f8f7f7;
+    margin-top: 0;
+    position: relative;
+   
+   
+}
+.content section{
+   width: 60%;
+   margin-left: 120px;
+   padding-bottom: 80px;
+   margin-right: auto;
+   flex: 1 0;
+}
+.content section article {
+   padding: 30px 5px 5px 5px;
+   margin-bottom: 30px;
+    
+}
+.content section article p {
+   font-size: 14px;
+   padding: 0px 3px 0px 20px;
+   text-align: justify;
+    
+}
+.content section article .date-article{
+    color: #7b7b7b;
+    font-size: 15px;  
+    font-weight: 500;
+ }
+.content section article h2 {
+    color: #1b1b1b;
+    padding: 5px 0px 10px 0px;
+ }
+.content section article img{
+    width: 315px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+  
+    
+}
+.content .slide{
+   background-color:#ececec ;
+   width: 25%;
+   height: 100%;
+   margin-top: auto;
+   padding-top: 0px;
+   flex: none;
+   float: right;
+   position: absolute;
+   right: 0;
+   top: 0%;
+}
+.content .slide ul h2{
+    color: #1b1b1b;
+    padding: 20px 0px;
+ }
+ .content .slide ul {
+    color: #1b1b1b;
+    padding:0px 0px 10px 30px ;
+   
+ }
+ .content .slide ul li{
+    list-style-type: none;
+    padding-top: 10px;
+ }
+ .content .slide ul li a{
+    text-decoration: none;
+    color: #616161;
+    font-weight: 600;
+ }
+ .content .slide .slide-element{
+    margin-top: 50px;
+    
+ }
+ .content .slide:nth-child() .slide-element{
+    border-top: 2px solid #7e7d7d;
+    width: 80%;
+ }
+
+footer{
+    height: 190px;
+    margin-top: 0%;
+    flex: none;
+    background-color: #cac8c8;
+    color: #222222;
+    font-size: 14px;
+}
+footer h2, footer .important-links, footer .contact{
+    text-align: center;
+    padding-top: 15px;
+}
+footer h2{
+    font-size: 15px;
+ }
+ footer h2 a{
+    color: #222222;
+    text-decoration: none;
+ }
+footer .important-links a{
+    color: #222222;
+    margin: 5px;
+}
+footer .media-sociaux{
+    float: right;
+    margin-right: 10px;
+}
+footer .media-sociaux img{
+    width: 30px;
+    height: auto;
+}
+footer .copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 10px;
+    
+}
+}
+
+@media (min-width: 763px) and (max-width: 1190px){
+
+    /* Design for header*/
+ header{
+     background-color: #fff;
+     margin:0;
+ }
+ header h1{
+     border-bottom: 1px solid #e6e3e3;
+     font-size: 16px;
+     font-weight: 600;
+     padding: 10px;
+ 
+ }
+ header h1 a{
+     text-decoration: none;
+     color: #838282;
+ 
+ }
+ header .button{
+    position: absolute;
+    display: block;
+    top: 1%;
+    right: 15px;
+     z-index: 3;
+     
+  }
+  header .menu-button {
+      width: 32px;
+      height: auto;
+     
+  }
+ .navbloc{
+     
+     position: static;
+     justify-content:space-between ;
+     align-items: center;
+     width: 100%;
+ }
+ .navbloc nav{
+    left: 0;
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+   position: fixed;
+   height: 120vh;
+   background-color: #6a6a6a;
+   top: 0px;
+   padding-top: 70px;
+   margin-top: -38px;
+   left:-100%;
+   transition: all .5s;
+   text-align: center;
+   z-index: 2;
+}
+nav ul.show{
+    left:0;
+}
+nav li{
+    display: block;
+    padding-top: 40px;
+}
+.navbloc nav .nav-link{
+   color: #fff;
+   text-decoration: none;
+   margin-left: 100px;
+   font-size: 16px;
+}
+.navbloc nav .nav-link:hover{
+    color: #080808;
+    font-weight: 600;
+    transition: all .5s;
+    
+ }
+
+  .navbloc nav .icones-media{
+    float: right;
+    margin-right: 40px;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    z-index: 3;
+   
+}
+ .navbloc nav .icones-media img{
+     width: 18px;
+     height: auto;
+     margin: 0px 15px 0px 0px;
+ }
+ /*Design for banner*/
+ .banner {
+    margin-bottom: 0;
+    margin-top: -60px;
+ }
+ .banner img{
+     width: 100%;
+     height: 350px;
+ }
+ /* here is the styling of the main content*/
+ .content{
+     background-color: #f8f7f7;
+     margin-top: 0;
+     position: relative;
+    
+    
+ }
+ .content section{
+    width: 95%;
+    margin-left: 2%;
+    padding-bottom: 80px;
+    margin-right: auto;
+    flex: 1 0;
+ }
+ .content section article {
+    padding: 5% 2% 2% 2%;
+    margin-bottom: 30px;
+     
+ }
+ .content section article p {
+    font-size: 14px;
+    padding: 0px 3px 0px 20px;
+    text-align: justify;
+     
+ }
+ .content section article .date-article{
+     color: #7b7b7b;
+     font-size: 15px;  
+     font-weight: 500;
+  }
+ .content section article h2 {
+     color: #1b1b1b;
+     padding: 5px 0px 10px 0px;
+  }
+ .content section article img{
+     width: 315px;
+     height: auto;
+     float: left;
+     margin-right: 15px;
+   
+     
+ }
+ .content .slide{
+    background-color:#ececec ;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    padding-top: 0px;
+    flex: none;
+    float: right;
+    position: relative;
+   
+ }
+ .content .slide ul h2{
+     color: #1b1b1b;
+     padding: 20px 0px;
+  }
+  .content .slide ul {
+     color: #1b1b1b;
+     padding:0px 0px 10px 30px ;
+    
+  }
+  .content .slide ul li{
+     list-style-type: none;
+     padding-top: 10px;
+  }
+  .content .slide ul li a{
+     text-decoration: none;
+     color: #616161;
+     font-weight: 600;
+  }
+  .content .slide .slide-element{
+     margin-top: 50px;
+     
+  }
+  .content .slide:nth-child() .slide-element{
+     border-top: 2px solid #7e7d7d;
+     width: 80%;
+  }
+ 
+ footer{
+     height: 14%;
+     width: 100%;
+     margin-top: 0%;
+     flex: none;
+     background-color: #cac8c8;
+     color: #3e3e3e;
+     font-size: 14px;
+ }
+ footer h2, footer .important-links, footer .contact{
+     text-align: center;
+     padding-top: 15px;
+ }
+ footer h2{
+    font-size: 15px;
+    padding-top: 20px;
+ }
+ footer h2 a{
+    color: #222222;
+    text-decoration: none;
+   
+ }
+ footer .important-links a{
+     color: #222222;
+     margin: auto;
+     padding: auto;
+     text-align: center;
+     display: block;
+     font-size: 17px;
+     width: 90px;
+ }
+ footer .media-sociaux{
+     float: right;
+     margin-right: 10px;
+ }
+ footer .media-sociaux img{
+     width: 28px;
+     height: auto;
+ }
+ footer .copyright{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     margin-left: 0;
+     margin-right: 0;
+     padding-bottom: 10px;
+     
+ }
+ }
+
+ /*For small devices*/
+ @media (max-width: 760px){
+
+    /* Design for header*/
+ header{
+     background-color: #fff;
+     margin:0;
+ }
+ header h1{
+     border-bottom: 1px solid #e6e3e3;
+     font-size: 16px;
+     font-weight: 600;
+     padding: 10px;
+ 
+ }
+ header h1 a{
+     text-decoration: none;
+     color: #838282;
+ 
+ }
+ header .button{
+    position: absolute;
+    display: block;
+    top: 1%;
+    right: 15px;
+    z-index: 3;
+     
+  }
+  header .menu-button {
+      width: 32px;
+      height: auto;
+     
+  }
+ .navbloc{
+     
+     position: static;
+     justify-content:space-between ;
+     align-items: center;
+     width: 100%;
+ }
+ .navbloc nav{
+    left: 0;
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+   position: fixed;
+   height: 100vh;
+   padding-top: 40px;
+   background-color: #6a6a6a;
+   top: 40px;
+   margin-top: -40px;
+   left:-100%;
+   transition: all .5s;
+   text-align: center;
+   z-index: 2;
+}
+nav ul.show{
+    left:0;
+}
+nav li{
+    display: block;
+    padding-top: 20px;
+}
+.navbloc nav .nav-link{
+   color: #fff;
+   text-decoration: none;
+   margin-left: 40px;
+   font-size: 17px;
+}
+.navbloc nav .nav-link:hover{
+    color: #080808;
+    font-weight: 600;
+    transition: all .5s;
+    
+ }
+ .navbloc nav .icones-media{
+    float: right;
+    margin-right: 60px;
+    z-index: 3;
+    
+   
+}
+ .navbloc nav .icones-media img{
+     width: 16px;
+     height: auto;
+     margin: 0px 15px 0px 0px;
+     
+ }
+ /*Design for banner*/
+ .banner {
+    margin-bottom: 0;
+    margin-top: -60px;
+    position: relative;
+   
+ }
+ .banner img{
+     width: 100%;
+     height: 25%;
+     z-index: 2;
+ }
+ /* here is the styling of the main content*/
+ .content{
+     background-color: #f8f7f7;
+     margin-top: 0;
+     position: relative;
+    
+    
+ }
+ .content section{
+    
+    width: 98%;
+    margin-left: 2%;
+    padding-bottom: 80px;
+    margin-right: auto;
+    flex: 1 0;
+ }
+ .content section article {
+    display: flex;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+    padding: 5% 2% 2% 2%;
+    margin-bottom: 30px;
+     
+ }
+ .content section article p {
+    font-size: 14px;
+    padding: 20px 15px 0px 30px;
+    text-align: justify;
+
+ }
+ .content section article .date-article{
+     color: #7b7b7b;
+     font-size: 15px;  
+     font-weight: 500;
+   
+  }
+ .content section article h2 {
+     color: #1b1b1b;
+     padding: 5px 0px 10px 0px;
+  }
+ .content section article img{
+     width: 80%;
+     height: auto;
+     float: left;
+    
+   
+     
+ }
+ .content .slide{
+    background-color:#ececec ;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    padding-top: 0px;
+    flex: none;
+    float: right;
+    position: relative;
+   
+ }
+ .content .slide ul h2{
+     color: #1b1b1b;
+     padding: 20px 0px;
+  }
+  .content .slide ul {
+     color: #1b1b1b;
+     padding:0px 0px 10px 30px ;
+    
+  }
+  .content .slide ul li{
+     list-style-type: none;
+     padding-top: 10px;
+  }
+  .content .slide ul li a{
+     text-decoration: none;
+     color: #616161;
+     font-weight: 600;
+  }
+  .content .slide .slide-element{
+     margin-top: 50px;
+     
+  }
+  .content .slide:nth-child() .slide-element{
+     border-top: 2px solid #7e7d7d;
+     width: 80%;
+  }
+ 
+ footer{
+     height: 10%;
+     width: 100%;
+     margin-top: 0%;
+     flex: none;
+     background-color: #cac8c8;
+     color: #222222;
+     font-size: 14px;
+ }
+ footer h2, footer .important-links, footer .contact {
+     text-align: center;
+     padding-top: 15px;
+     color: #222222;
+ }
+ footer h2{
+    font-size: 15px;
+ }
+ footer h2 a{
+    color: #222222;
+    text-decoration: none;
+ }
+ footer .important-links a{
+     color: #222222;
+     margin: auto;
+     padding: auto;
+     text-align: center;
+     display: block;
+     font-size: 17px;
+     width: 90px;
+ }
+ footer .media-sociaux{
+     float: right;
+     margin-right: 0%;
+ }
+ footer .media-sociaux img{
+     width: 20px;
+     height: auto;
+     margin-right: 2px;
+ }
+ footer .copyright{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     margin-left: 0;
+     margin-right: 0;
+     padding-top: 25px;
+     padding-bottom: 10px;
+     
+ }
+ }
