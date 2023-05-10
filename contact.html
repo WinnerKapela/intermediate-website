@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/home (2).png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('#menu-toggle').toggleClass('show');
+            });
+        });
+    </script>
+    <title>contact</title>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1><a href="index.html">My Blog</a></h1>
+            <div class="button">
+                <img src="img/menu.png" id="icon" class="menu-button"  alt="">
+              </div>
+           
+            <div class="navbloc">
+                <nav>
+                    <ul id="menu-toggle">
+                        <li><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li><a class="nav-link" href="articles.html">Articles</a></li>
+                       <li><a class="nav-link" href="a-propos.html">A propos</a></li> 
+                        <li><a id="active" class="nav-link" href="">Contact</a></li>
+    
+                    </ul>
+                    
+                    <div class="icones-media">
+                        <a href=""><img src="img/facebook-app-symbol.png" alt="icone facebook"></a>
+                        <a href=""><img src="img/twitter1.png" alt="icone twitter"></a>
+                    </div>
+                </nav>
+                
+            </div>
+        </header>
+
+        <div class="content-contact">
+            <h2>Nous écrire</h2>
+            <div>
+                <form action="">
+                    <div>
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" placeholder="Entrez votre nom" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="emaill" placeholder="votreemail@email.com" required>
+                    </div>
+                    <div>
+                       <textarea name="" id="" cols="30" rows="100" placeholder="Ecrivez votre message ici" required></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="media-content">
+                <h2>Ou connectez-vous avec nos differents medias sociaux</h2>
+                
+                <div class="medias">
+                    <a href=""><img src="img/facebook (1).png" alt=""></a>
+                    <a href=""><img src="img/instagram (1).png" alt=""></a>
+                    <a href=""><img src="img/twitter.png" alt=""></a>
+                    <a href=""><img src="img/gmail.png" alt=""></a>
+                    
+                </div>
+            </div>
+        </div>   
+
+        <footer>
+            <h2><a href="index.html">My Blog</a></h2>
+            <div class="important-links">
+                <a href="index.html">Accueil</a>
+                <a href="articles.html">Article</a>
+                <a href="a-propos.html">A propos</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+
+            <div class="contact">
+                <a href="mailto:winnkapela@gmail.com">Nous envoyer un mail</a>
+                 <p>Info line +243 821034469</p>
+            </div>
+            <div class="media-sociaux">
+                <a href=""><img src="img/facebook (1).png" alt=""></a>
+                <a href=""><img src="img/instagram (1).png" alt=""></a>
+                <a href=""><img src="img/twitter.png" alt=""></a>
+            </div>
+            <p class="copyright">Winner Kapela &copy; 2023</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -13,7 +13,7 @@ body{
 header{
     background-color: #fff;
     margin:0;
-    
+  
 }
 header h1{
     border-bottom: 1px solid #e6e3e3;
@@ -48,6 +48,7 @@ header .menu-button img{
     justify-content:space-between ;
     align-items: center;
     width: 100%;
+    z-index: 3;
 }
 .navbloc nav{
     left: 0;
@@ -59,6 +60,7 @@ header .menu-button img{
     height: 60px;
     line-height: 55px;
     background-color: #ffffff;
+    box-shadow: 0px 10px 15px 0px #bebdbd;
 
 }
 nav ul{
@@ -76,8 +78,12 @@ nav li{
 .navbloc nav .nav-link:hover{
     color: #080808;
     font-weight: 600;
-    transition: all .5s;
-    
+    transition: all .5s;  
+ }
+ .navbloc nav #active{
+    color: #080808;
+    font-weight: 600;
+   
  }
 .navbloc nav .icones-media{
     float: right;
@@ -99,7 +105,6 @@ nav li{
 .banner img{
     width: 100%;
     height: 350px;
-   
 }
 /* here is the styling of the main content*/
 .content{
@@ -109,12 +114,82 @@ nav li{
    
    
 }
+.content .news{
+    width: 74.7%;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: wrap;
+}
+.content .news div{
+   margin: 7px;
+   position: relative;
+ }
+ .content .news div:hover{
+    transform: scale(0.9);
+    transition: all .5s;
+  }
+.content .news div a img {
+   width: 365px;
+   height: 400px;
+   opacity: 0.9;
+}
+.content .news div a p {
+    background-color: #080808;
+    opacity: 0.9;
+     height: 100px;
+     position: absolute;
+     bottom: 5px;
+     padding: 8px;
+  }
+  .content .news div a {
+   text-decoration: none;
+   color: #ffffff;
+   font-size: 22px;
+  }
+  .content .news div p:hover{
+    text-decoration: underline;
+   }
 .content section{
    width: 60%;
    margin-left: 120px;
    padding-bottom: 80px;
    margin-right: auto;
    flex: 1 0;
+}
+.suggestion {
+    margin-left: 10%;
+    width: 55%;
+}
+.suggestion div{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+.suggestion p {
+    background-color: #080808;
+    opacity: 0.9;
+     height: 100px;
+     position: absolute;
+     bottom: 5px;
+     padding: 8px;
+     width: 100%;
+     text-align: center;
+     text-decoration: underline;
+}
+.suggestion a {
+   
+    color: #fff;
+    font-size: 25px;
+   
+}
+.suggestion img {
+   width: 100%;
+   height: 400px;
+    opacity: 0.9;
+    box-shadow: 2px 2px 15px #cbcbcb;
+  
 }
 .content section article {
    padding: 30px 5px 5px 5px;
@@ -133,8 +208,22 @@ nav li{
     font-weight: 500;
  }
 .content section article h2 {
-    color: #1b1b1b;
     padding: 5px 0px 10px 0px;
+ }
+ .content section article h2 a{
+    color: #1b1b1b;
+    text-decoration: none;
+ }
+
+ .content section article .voir-plus {
+    margin-top: 10px;
+    font-size: 17px;
+ }
+ .content section article .voir-plus a{
+    color: #1b1b1b;
+ }
+ .content section article .voir-plus a:hover{
+    text-decoration: none;
  }
 .content section article img{
     width: 315px;
@@ -174,6 +263,12 @@ nav li{
     color: #616161;
     font-weight: 600;
  }
+ .content .slide ul li a:hover{
+    text-decoration: none;
+    color: #303030;
+    font-weight: 600;
+    transition:all .3s;
+ }
  .content .slide .slide-element{
     margin-top: 50px;
     
@@ -185,7 +280,7 @@ nav li{
 
 footer{
     height: 190px;
-    margin-top: 0%;
+    margin-top: auto;
     flex: none;
     background-color: #cac8c8;
     color: #222222;
@@ -226,6 +321,240 @@ footer .copyright{
     margin-right: 0;
     
 }
+/*page article*/
+.banner-art{
+    position: relative;
+    z-index: 1;
+}
+.banner-art img{
+    width: 100%;
+    height: 350px;
+}
+.banner-art h2{
+  position: absolute;
+  bottom:45%;
+  left: 40%;
+ text-align: center;
+ font-size: 4em;
+ font-weight: 600;
+ color: #fff;
+}
+
+/*page articles-content*/
+.sub-links-articles{
+    background-color: #f6f6f6;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e7e7e7;
+    height: 40px;
+    line-height: 30px;
+}
+.sub-links-articles li{
+   color: #1b1b1b;
+   margin-left: 5px;
+}
+.sub-links-articles li a{
+    color: #1b1b1b;
+    margin-right: -5px;
+ }
+ .content .full-art{
+    padding-top: 100px;
+ }
+ .content .full-art h2{
+    font-size: 2.3em;
+    margin-bottom: 5px;
+ }
+ .content .full-art .contenair-img-article{
+    width: 95%;
+    margin-top: 45px;
+   }
+   .content .full-art .img-article{
+      width: 100%;
+      height: 400px;
+      margin-bottom: 50px;
+      box-shadow: 2px 2px 12px #b2b2b2;
+   }
+ .content section article .illustration-art{
+    width: 70%;
+ }
+ .content section article .content-art{
+   clear: both;
+ }
+ .content section article .share{
+    margin-top: 35px;
+   }
+ .content section article .share img{
+   width: 32px;
+  }
+  .content .slide .slide-link {
+    margin-top: 100px;
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content .slide .slide-link h2{
+    color: #1b1b1b;
+    padding: 20px 0px;
+  }
+  .content .slide .slide-link img {
+    width: 250px;
+  }
+  .content .slide .slide-link img:hover {
+    opacity: 0.8;
+  }
+  .content .slide .slide-link p {
+   margin-bottom: 25px;
+  }
+  .content .slide .slide-link p a {
+    color:#616161;
+    font-weight: 600;
+  }
+  .content .slide .slide-link p span {
+    display: block;
+    clear: both;
+  }
+  /*page a propos*/
+  .content-apropos {
+   margin-top: 60px;
+ }
+.content-apropos h2{
+   text-align: center;
+   margin-bottom: 40px;
+   color: #1b1b1b;
+   font-size: 28px ;
+   font-weight: 500;
+}
+.content-apropos div{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+ }
+ .content-apropos div p{
+  border-left: 4px solid #616161;
+  padding-left: 15px;
+  margin-bottom: 10px;
+ }
+ .content-apropos div a{
+   color: #1b1b1b;
+   font-size: 20px;
+   }
+/*page contact*/
+.content-contact{
+    margin-top: 60px;
+}
+.content-contact h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1b1b1b;
+    font-size: 28px ;
+    font-weight: 500;
+ }
+.content-contact form{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    border: 2px solid #3e3e3e;
+    border-radius: 10px;
+}
+.content-contact form div{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.content-contact form div label{
+    font-weight: 600;
+}
+.content-contact form div input{
+    border: none;
+    background-color: #e2e0e0;
+    margin-top: 20px;
+}
+.content-contact form div input[type ='text']:valid, div input[type ='email']:valid{
+    background-color: #88f5c4;
+}
+
+.content-contact form div input[type ='text'],div input[type ='email']{
+    width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+}
+.content-contact form div textarea{
+    background-color:  #e2e0e0;
+    width: 400px;
+    height: 280px;
+    resize: none;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
+.content-contact form .submit{
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+   
+}
+.content-contact form div input[type ='submit']{
+    width: 90px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d7960a;
+    color: #fff;
+    font-weight: 600;
+}
+.content-contact form div input[type ='submit']:hover{
+    background-color: #ebab21;
+    cursor: pointer;
+}
+.medias {
+   width: 300px;
+   margin-left: auto;
+   margin-right: auto; 
+   margin-bottom: 60px;  
+}
+.media-content h2{ 
+    color: #1b1b1b;
+    font-size: 28px;
+    font-weight: 500;
+ }
+.medias a{
+    margin-right: 30px;   
+}
+.medias img{
+    width: 40px;  
+}
+
+/*page error*/
+.page .forbidden{
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    box-shadow: 1px 4px 6px #989898;
+    border-radius: 10px;
+}
+.page .forbidden .forbidden-img{
+    width: 60px;
+    margin-right: 10px;
+    float: left;
+}
+.page .forbidden .msg-error{
+    padding-top: 5px;
+    font-size: 20px;
+}
+.page .forbidden  .back {
+    clear: both; 
+    margin-top: 80px; 
+}
+.page .forbidden .back-t-home-link img{
+    width: 55px;
+    
+}
+
 /* Css Media query*/
 
 /*large devices*/
@@ -247,6 +576,56 @@ footer .copyright{
         position: relative;
        
        
+    }
+    .content .news{
+        width: 74.7%;
+        background-color: #efefef;
+        display: flex;
+        flex-direction: wrap;
+    }
+    .content .news div{
+       margin: 7px;
+       position: relative;
+     }
+    .content .news div a img {
+       width: 100%;
+       height: 400px;
+       opacity: 0.9;
+    }
+    .suggestion {
+        margin-left: 10%;
+        width: 55%;
+    }
+    .suggestion div{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        
+    }
+    .suggestion p {
+        background-color: #080808;
+        opacity: 0.9;
+         height: 100px;
+         position: absolute;
+         bottom: 5px;
+         padding: 8px;
+         width: 100%;
+         text-align: center;
+         text-decoration: underline;
+    }
+    .suggestion a {
+       
+        color: #fff;
+        font-size: 25px;
+       
+    }
+    .suggestion img {
+       width: 100%;
+       height: 400px;
+        opacity: 0.9;
+        box-shadow: 2px 2px 15px #cbcbcb;
+      
     }
     .content section{
        width: 60%;
@@ -515,7 +894,7 @@ footer .copyright{
     display: block;
     top: 1%;
     right: 15px;
-     z-index: 3;
+     z-index: 2;
      
   }
   header .menu-button {
@@ -534,39 +913,54 @@ footer .copyright{
     left: 0;
     width: 100%;
 }
-nav ul{
+nav #menu-toggle{
     width: 100%;
    position: fixed;
    height: 120vh;
-   background-color: #6a6a6a;
+   background-color: #f3f3f3;
    top: 0px;
    padding-top: 70px;
    margin-top: -38px;
    left:-100%;
    transition: all .5s;
    text-align: center;
-   z-index: 2;
+   z-index: 5;
 }
-nav ul.show{
+.sub-links-articles{
+    background-color: #fbfbfb;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #3e3e3e;
+    height: 40px;
+    line-height: 30px;
+    
+}
+.sub-links-articles li{
+   color: #1b1b1b;
+   margin-left: 5px;
+   margin-top: -40px;
+   display: inline;
+}
+nav #menu-toggle.show{
     left:0;
+    z-index: 1;
 }
 nav li{
     display: block;
     padding-top: 40px;
 }
 .navbloc nav .nav-link{
-   color: #fff;
+   color: #333333;
    text-decoration: none;
-   margin-left: 100px;
-   font-size: 16px;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 18px;
 }
 .navbloc nav .nav-link:hover{
     color: #080808;
     font-weight: 600;
-    transition: all .5s;
-    
+    transition: all .5s;  
  }
-
   .navbloc nav .icones-media{
     float: right;
     margin-right: 40px;
@@ -591,13 +985,44 @@ nav li{
      height: 350px;
  }
  /* here is the styling of the main content*/
+ .content .news{
+    width: 100%;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: wrap;
+}
+.content .news div{
+   margin: 7px;
+   position: relative;
+ }
+.content .news div a img {
+   width: 100%;
+   height: 350px;
+   opacity: 0.9;
+}
  .content{
      background-color: #f8f7f7;
      margin-top: 0;
-     position: relative;
-    
-    
+     position: relative; 
  }
+ .suggestion {
+    margin-left: 2%;
+    width: 98%;
+}
+.suggestion div{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+.suggestion img {
+   width: 100%;
+   height: 400px;
+    opacity: 0.9;
+    box-shadow: 2px 2px 15px #cbcbcb;
+  
+}
  .content section{
     width: 95%;
     margin-left: 2%;
@@ -721,6 +1146,173 @@ nav li{
      padding-bottom: 10px;
      
  }
+ /*page article*/
+.banner-art{
+    position: relative;
+    margin-top: -60px;
+    z-index: 0;
+}
+.banner-art img{
+    width: 100%;
+    height: 350px;
+}
+.banner-art h2{
+  position: absolute;
+  bottom:45%;
+  left: 35%;
+ text-align: center;
+ font-size: 3.5em;
+ font-weight: 600;
+ color: #fff;
+}
+    /*Page Article-content*/
+    .content .full-art{
+        margin-top: -25px;
+     }
+     .content .full-art h2{
+        font-size: 1.8em;
+        margin-bottom: 5px;
+     }
+     .content .full-art .contenair-img-article{
+        width: 95%;
+        margin-top: 45px;
+       }
+       .content .full-art .img-article{
+          width: 100%;
+          height: 400px;
+          margin-bottom: 50px;
+          box-shadow: 2px 2px 12px #b2b2b2;
+       }
+      /*page a propos*/
+      .navbloc nav{
+        left: 0;
+        flex: none;
+        justify-content: space-evenly;
+        white-space: nowrap;
+        flex: none;
+        width: 100%;
+        height: 60px;
+        line-height: 55px;
+        background-color:none;
+        box-shadow: none;
+    
+    }
+    .content-apropos {
+       margin-top: -20px;
+     }
+ .content-apropos div{
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 100px;
+  }
+ }
+ @media (max-width: 930px) and (min-width:760px){
+    .content .news{
+        width: 100%;
+        background-color: #efefef;
+        display: block;
+        flex-direction: column;
+    }
+    .content .news div{
+       margin: 7px;
+       position: relative;
+     }
+     .content .news .news-1, .news .news-2{
+       width: 45%;
+       float: left;
+       margin-left: 4.3%;
+      }
+      .content .news .news-3{
+       clear: both;
+       }
+    .content .news div a img {
+       width: 100%;
+       height: 350px;
+       opacity: 0.9;
+    }
+    .content .news div a p {
+        background-color: #080808;
+        opacity: 0.9;
+        width: 100%;
+         height: 100px;
+         position: absolute;
+         bottom: 5px;
+         padding: 8px;
+         text-align: center;
+      }
+     .content{
+         background-color: #f8f7f7;
+         margin-top: 0;
+         position: relative;
+     }
+     .suggestion {
+        margin-left: 8%;
+        width: 85%;
+    }
+    .suggestion div{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        
+    }
+    .suggestion p {
+        background-color: #080808;
+        opacity: 0.9;
+         height: 100px;
+         position: absolute;
+         bottom: 5px;
+         padding: 8px;
+         width: 100%;
+         text-align: center;
+         text-decoration: underline;
+    }
+    .suggestion a {
+       
+        color: #fff;
+        font-size: 25px;
+       
+    }
+    .suggestion img {
+       width: 100%;
+       height: 400px;
+        opacity: 0.9;
+        box-shadow: 2px 2px 15px #cbcbcb;
+      
+    }
+    .content section article .share img{
+        width: 28px;
+       }
+        /*page contact*/
+  .content-contact form{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    border: 2px solid #3e3e3e;
+    border-radius: 10px;
+}
+.content-contact form div{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.content-contact form div input[type ='text'],div input[type ='email']{
+    width: 320px;
+    padding: 12px;
+    border-radius: 10px;
+}
+.content-contact form div textarea{
+    background-color:  #e2e0e0;
+    width: 400px;
+    height: 280px;
+    resize: none;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
  }
 
  /*For small devices*/
@@ -767,12 +1359,12 @@ nav li{
     left: 0;
     width: 100%;
 }
-nav ul{
+nav #menu-toggle{
     width: 100%;
    position: fixed;
    height: 100vh;
    padding-top: 40px;
-   background-color: #6a6a6a;
+   background-color: #f3f3f3;
    top: 40px;
    margin-top: -40px;
    left:-100%;
@@ -780,7 +1372,20 @@ nav ul{
    text-align: center;
    z-index: 2;
 }
-nav ul.show{
+.sub-links-articles{
+    background-color: #fbfbfb;
+    border-top: 1px solid #e3e3e3;
+    height: 40px;
+    line-height: 30px;
+    
+}
+.sub-links-articles li{
+   color: #1b1b1b;
+   margin-left: 5px;
+   margin-top: -40px;
+   display: inline;
+}
+nav #menu-toggle.show{
     left:0;
 }
 nav li{
@@ -788,11 +1393,13 @@ nav li{
     padding-top: 20px;
 }
 .navbloc nav .nav-link{
-   color: #fff;
-   text-decoration: none;
-   margin-left: 40px;
-   font-size: 17px;
-}
+    color: #333333;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 17px;
+ }
 .navbloc nav .nav-link:hover{
     color: #080808;
     font-weight: 600;
@@ -825,13 +1432,76 @@ nav li{
      z-index: 2;
  }
  /* here is the styling of the main content*/
+
+ .content .news{
+    margin-top: -11px;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #efefef;
+    display: block;
+    flex-direction: column;
+}
+.content .news div{
+   margin: 7px;
+   position: relative;
+ }
+ .content .news .news-1, .news .news-2{
+   width: 45%;
+   float: left;
+   margin-left: 4.3%;
+  }
+  .content .news .news-3{
+   clear: both;
+   }
+.content .news div a img {
+   width: 100%;
+   height: 350px;
+   opacity: 0.9;
+}
+.content .news div a p {
+    background-color: #080808;
+    opacity: 0.9;
+    width: 100%;
+     height: 100px;
+     position: absolute;
+     bottom: 5px;
+     padding: 8px;
+     text-align: center;
+  }
  .content{
      background-color: #f8f7f7;
      margin-top: 0;
-     position: relative;
-    
-    
+     position: relative;   
  }
+ .suggestion {
+    margin-left: 2%;
+    width: 95%;
+}
+.suggestion div{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    
+}
+.suggestion p {
+    background-color: #080808;
+    opacity: 0.9;
+     height: 100px;
+     position: absolute;
+     bottom: 5px;
+     padding: 8px;
+     width: 100%;
+     text-align: center;
+     text-decoration: underline;
+}
+.suggestion img {
+   width: 100%;
+   height: 400px;
+    opacity: 0.9;
+    box-shadow: 2px 2px 15px #cbcbcb;
+  
+}
  .content section{
     
     width: 98%;
@@ -867,12 +1537,16 @@ nav li{
      padding: 5px 0px 10px 0px;
   }
  .content section article img{
-     width: 80%;
+     width: 97%;
      height: auto;
-     float: left;
-    
-   
-     
+     float: left;   
+ }
+ .content section article .voir-plus {
+    margin-top: -25px;
+    font-size: 17px;
+ }
+ .content section article .voir-plus a{
+    color: #1b1b1b;
  }
  .content .slide{
     background-color:#ececec ;
@@ -963,4 +1637,342 @@ nav li{
      padding-bottom: 10px;
      
  }
+ /*page article*/
+ .banner-art{
+    position: relative;
+    margin-top: -60px;
+    z-index: 1;
+}
+.banner-art img{
+    width: 100%;
+    height: 300px;
+}
+.banner-art h2{
+  position: absolute;
+  bottom:45%;
+  left: 35%;
+ text-align: center;
+ font-size: 3em;
+ font-weight: 600;
+ color: #fff;
+}
+    /*Page Article-content*/
+    .content .full-art{
+        padding-top: 60px;
+        margin-top: -25px;
+     }
+     .content .full-art h2{
+        font-size: 1.8em;
+        margin-bottom: 5px;
+     }
+     .content .full-art .contenair-img-article{
+        width: 95%;
+        margin-top: 45px;
+       }
+       .content .full-art .img-article{
+          width: 100%;
+          height: auto;
+          margin-bottom: 50px;
+          box-shadow: 2px 2px 12px #b2b2b2;
+       }
+     .content section article .illustration-art{
+        width: 85%;
+     }
+     .content section article .share img{
+        width: 28px;
+       }
+        /*page a propos*/
+        .navbloc nav{
+            left: 0;
+            flex: none;
+            justify-content: space-evenly;
+            white-space: nowrap;
+            flex: none;
+            width: 100%;
+            height: 60px;
+            line-height: 55px;
+            background-color:none;
+            box-shadow: none;
+        
+        }
+        .content-apropos {
+           margin-top: -20px;
+         }
+ .content-apropos h2{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1b1b1b;
+    font-size: 25px ;
+    font-weight: 500;
  }
+ .content-apropos div{
+     width: 85%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 100px;
+  }
+          /*page contact*/
+          .content-contact{
+          margin-top: -30px;
+        }
+          .content-contact form{
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100px;
+            border: none;
+            border-radius: 10px;
+        }
+        .content-contact form div{
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+        .content-contact form div input[type ='text'],div input[type ='email']{
+            width: 82%;
+            padding: 12px;
+            border-radius: 10px;
+        }
+        .content-contact form div textarea{
+            background-color:  #e2e0e0;
+            width: 98%;
+            height: 280px;
+            resize: none;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+        }
+         .media-content h2{ 
+            color: #1b1b1b;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 0px 10px 0px 10px;
+         }
+     
+ }
+ @media (max-width:780px){
+    /*page error*/
+.page .forbidden{
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    box-shadow: 1px 4px 6px #989898;
+    border-radius: 10px;
+}
+.page .forbidden .forbidden-img{
+    width: 60px;
+    margin-left: 30%;
+    float: none;
+}
+.page .forbidden .msg-error{
+    padding-top: 20px;
+    font-size: 18px;
+    width: 100%;
+    margin-left: 1.5%;
+}
+.page .forbidden  .back {
+    clear: both; 
+    margin-top: 50px; 
+    margin-left: 1.8%;
+}
+.page .forbidden .back-t-home-link img{
+    width: 40px;
+    
+}
+.page .forbidden .back-t-home-link img:hover{
+   transform: scale(1.1);
+    
+}
+ }
+@media (max-width:724px){
+    .content .news{
+        width: 100%;
+        background-color: #efefef;
+        display: block;
+        flex-direction: column;
+    }
+    .content .news div{
+        margin-left: 15%;
+       position: relative;
+     }
+     .content .news .news-1, .news .news-2, .news .news-3{
+       width: 80%;
+       float: none;
+       margin-left: 15%;
+      }
+      .content .news .news-3{
+       clear: none;
+       }
+    .content .news div a img {
+       width: 90%;
+       height: 300px;
+       opacity: 0.9;
+    }
+    .content .news div a p {
+        background-color: #080808;
+        opacity: 0.9;
+        width: 90%;
+         height: 100px;
+         position: absolute;
+         bottom: 5px;
+         padding: 8px;
+         text-align: center;
+      }
+}
+@media (max-width:460px){
+    nav #menu-toggle{
+      
+       background-color: #f3f3f3;
+     
+    }
+    .content .news{
+        width: 100%;
+        background-color: #efefef;
+        display: block;
+        flex-direction: column;
+    }
+    .content .news div{
+        margin-left: 0%;
+       position: relative;
+     }
+     .content .news .news-1, .news .news-2, .news .news-3{
+       width: 100%;
+       float: none;
+       margin-left: 0%;
+      }
+      .content .news .news-3{
+       clear: none;
+       }
+    .content .news div a img {
+       width: 100%;
+       height: 300px;
+       opacity: 0.9;
+    }
+    .content .news div a p {
+        background-color: #080808;
+        opacity: 0.9;
+        width: 100%;
+         height: 100px;
+         position: absolute;
+         bottom: 5px;
+         padding: 8px;
+         text-align: center;
+      }
+      .suggestion {
+        margin-left: 2%;
+        width: 95%;
+    }
+    .suggestion div{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        
+    }
+    .suggestion p {
+        background-color: #080808;
+        opacity: 0.9;
+         height: 100px;
+         position: absolute;
+         bottom: 5px;
+         padding: 8px;
+         width: 100%;
+         text-align: center;
+         text-decoration: underline;
+         font-size: 22px;
+    }
+    .suggestion img {
+       width: 100%;
+       height: 300px;
+        opacity: 0.9;
+        box-shadow: 2px 2px 15px #cbcbcb;
+      
+    }
+    .banner-art{
+        position: relative;
+        margin-top: -60px;
+        z-index: 1;
+    }
+    .banner-art img{
+        width: 100%;
+        height: 200px;
+    }
+    .banner-art h2{
+      position: absolute;
+      bottom:45%;
+      left: 30%;
+     text-align: center;
+     font-size: 3em;
+     font-weight: 600;
+     color: #fff;
+    }
+    .banner-art h2{
+        position: absolute;
+        bottom:45%;
+        left: 34%;
+       text-align: center;
+       font-size: 2.5em;
+       font-weight: 600;
+       color: #fff;
+      }
+    /*Page Article-content*/
+    .content .full-art{
+        padding-top: 30px;
+        margin-top: -25px;
+     }
+     .content .full-art h2{
+        font-size: 2em;
+        margin-bottom: 5px;
+     }
+     .content section article .illustration-art{
+        width: 80%;
+     }
+      /*page contact*/
+      .content-contact form{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        border: none;
+        border-radius: none;
+    }
+    .content-contact form div{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+    .content-contact form div input[type ='text'],div input[type ='email']{
+        width: 83%;
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .content-contact form div textarea{
+        background-color:  #e2e0e0;
+        width: 100%;
+        height: 220px;
+        resize: none;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+    }
+    .content-contact form .submit{
+        width: 33%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+       
+    }
+    .content-contact form div input[type ='submit']{
+        width: 90px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #d7960a;
+        color: #fff;
+        font-weight: 600;
+    }
+}
